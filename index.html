@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La mia prima pagina HTML</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #333;
+color: white;
+padding: 20px;
+text-align: center;
+}
+main {
+padding: 20px;
+}
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 10px;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+button {
+padding: 10px 15px;
+font-size: 16px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+<header>
+<h1>Benvenuto nella mia pagina</h1>
+<p>Questa è una semplice pagina HTML</p>
+</header>
+
+
+<main>
+<h2>Chi sono</h2>
+<p>Qui puoi scrivere una breve descrizione.</p>
+
+
+<h2>Azioni</h2>
+<button onclick="saluta()">Cliccami</button>
+</main>
+
+
+<footer>
+<p>© 2026 - La mia pagina</p>
+</footer>
+
+
+<script>
+function saluta() {
+alert('Ciao! Hai cliccato il pulsante 🙂');
+}
+</script>
+
+
+</body>
+</html>
