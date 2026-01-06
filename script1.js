@@ -1,7 +1,7 @@
 const gridLetters = [
   \"SENIMOWNDOES\",
   \"ISTESSOEUNPS\",
-  \"ODIBENDEEO GY\".replace(' ', ''),
+  \"ODIBENDEEOGY\".replace(' ', ''),
   \"SUPERPOTERIO\",
   \"TUOKCALBOLTB\",
   \"IROTINEGNLUA\",
