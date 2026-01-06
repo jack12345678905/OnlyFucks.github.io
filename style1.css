@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(13, 40px);
+  gap: 4px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: default;
+}
+
+.cell.highlight {
+  background: #00aff0;
+  color: white;
+}
+
+#word-list {
+  list-style: none;
+  padding: 0;
+}
+
+#word-list li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 6px 10px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+#word-list li.found {
+  text-decoration: line-through;
+  color: gray;
+}
