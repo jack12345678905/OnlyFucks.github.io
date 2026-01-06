@@ -20,7 +20,7 @@ color: var(--dark);
 
 .btn-primary {
 background: var(--primary);
-color: white !important;
+/*color: white !important;*/
 padding: 8px 14px;
 border-radius: 6px;
 }
