@@ -48,39 +48,61 @@ const words = {
   FANTA:       { row: 6, col: 9, len: 5, dx: -1, dy: 0 } // corretto
 };
 let completed = false;
-// 4️⃣ SALVO LE CELLE PER OGNI PAROLA
+// ===============================
+// 4️⃣ PRECALCOLO CELLE DI OGNI PAROLA
+// ===============================
 Object.keys(words).forEach(word => {
   const data = words[word];
-  const cells = [];
+  data.cells = [];
+  data.active = false;
+
   for (let i = 0; i < data.len; i++) {
     const r = data.row + i * data.dy;
     const c = data.col + i * data.dx;
-    const cell = document.querySelector(`.cell[data-row="${r}"][data-col="${c}"]`);
-    if (cell) cells.push(cell);
+
+    const cell = document.querySelector(
+      `.cell[data-row="${r}"][data-col="${c}"]`
+    );
+
+    if (cell) data.cells.push(cell);
   }
-  data.cells = cells;
-  data.active = false; // stato parola
 });
 
-// 5️⃣ CLICK SU OGNI PAROLA (toggle sicuro)
-document.querySelectorAll("#word-list li").forEach(li => {
-  li.addEventListener("click", () => {
-    const word = li.textContent;
+// ===============================
+// 5️⃣ CLICK SULLE DOMANDE
+// → mostra/nasconde la risposta
+// ===============================
+document.querySelectorAll(".question").forEach(q => {
+  q.addEventListener("click", () => {
+    const answer = q.nextElementSibling;
+    answer.classList.toggle("hidden");
+  });
+});
+
+// ===============================
+// 6️⃣ CLICK SULLE RISPOSTE
+// → evidenzia parola nel crucipuzzle
+// ===============================
+document.querySelectorAll(".answer").forEach(ans => {
+  ans.addEventListener("click", () => {
+    const word = ans.dataset.word;
     const data = words[word];
     if (!data) return;
 
     // toggle stato parola
     data.active = !data.active;
-    li.classList.toggle("found");
+    ans.classList.toggle("found");
 
-    // aggiorno ogni cella della parola
+    // aggiorna celle
     data.cells.forEach(cell => {
       let count = parseInt(cell.dataset.count);
+
       if (data.active) {
-        count++; // parola attiva
+        count++;
       } else {
-        count--; // parola disattiva
+        count--;
       }
+
       cell.dataset.count = count;
 
       if (count > 0) {
