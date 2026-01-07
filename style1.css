@@ -48,6 +48,7 @@ body {
 
 .hidden {
   display: none;
+  text-align: left
 }
 .question {
   text-align: left
@@ -65,7 +66,4 @@ body {
 .answer.found {
   text-decoration: underline;
   background: #d0f0ff;
-}
-.answer hidden {
-  display: none;
 }
