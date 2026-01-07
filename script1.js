@@ -94,7 +94,7 @@ document.querySelectorAll("#word-list li").forEach(li => {
         Object.values(words).every(w => w.active)
       ) {
         completed = true;
-        alert("🎉 Complimenti! Hai completato il crucipuzzle 🎓");
+        alert("🎉 Complimenti! Hai completato il crucipuzzle ora leggi le lettere non evidenziate e vediamo cosa esce... 🎓");
       }
 
     });
