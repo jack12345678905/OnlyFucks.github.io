@@ -31,11 +31,13 @@ gridLetters.forEach((rowStr, r) => {
 
 // 3️⃣ SOLUZIONI CON COORDINATE
 const words = {
-  BALTO:        { row: 4, col: 8, len: 5, dx: -1, dy: 0 },
-  SUPERPOTERI: { row: 3, col: 0, len: 11, dx: 1, dy: 0 },
-  OMERO:       { row: 7, col: 1, len: 5, dx: 1, dy: 1 },
-  DUCE:        { row: 1, col: 10, len: 4, dx: 0, dy: 1 },
-  FANTA:       { row: 6, col: 6, len: 5, dx: -1, dy: 1 }
+  BALTO:       { row: 4, col: 8, len: 5, dx: -1, dy: 0 }, //non corretto
+  BOLT:        { row: 4, col: 7, len: 4, dx: 1, dy: 0 }, // corretto
+  BLACKOUT:    { row: 4, col: 7, len: 8, dx: -1, dy: 0 }, // corretto
+  SUPERPOTERI: { row: 3, col: 0, len: 11, dx: 1, dy: 0 }, // corretto
+  OMERO:       { row: 7, col: 1, len: 5, dx: 1, dy: 1 }, // non corretto
+  DUCE:        { row: 1, col: 10, len: 4, dx: 0, dy: 1 }, // non corretto
+  FANTA:       { row: 6, col: 6, len: 5, dx: -1, dy: 1 } // non corretto
 };
 
 // 4️⃣ SALVO LE CELLE PER OGNI PAROLA
