@@ -37,7 +37,7 @@ const words = {
   SUPERPOTERI: { row: 3, col: 0, len: 11, dx: 1, dy: 0 }, // corretto
   OMERO:       { row: 7, col: 2, len: 5, dx: 1, dy: 0 }, // corretto
   DUCE:        { row: 8, col: 6, len: 4, dx: -1, dy: 1 }, // corretto
-  FANTA:       { row: 6, col: 10, len: 5, dx: -1, dy: 1 } //corretto
+  FANTA:       { row: 6, col: 9, len: 5, dx: -1, dy: 0 } // noncorretto
 };
 
 // 4️⃣ SALVO LE CELLE PER OGNI PAROLA
