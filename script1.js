@@ -1,8 +1,8 @@
 // 1️⃣ DEFINIZIONE DELLA GRIGLIA
 const gridLetters = [
-  "SENIMOWNDOESO",
-  "ISTESSOEUNPSS",
-  "ODIBENDEEOOGY",
+  "SENIMOWNDOES",
+  "ISTESSOEUNPS",
+  "ODIBENDEEOGY",
   "SUPERPOTERIO",
   "TUOKCALBOLTB",
   "IROTINEGNLUA",
@@ -13,6 +13,8 @@ const gridLetters = [
   "OSSECORPTEEL",
   "LGREBELKNIDO"
 ];
+
+
 
 // 2️⃣ CREAZIONE HTML DELLA GRIGLIA
 const grid = document.getElementById("grid");
