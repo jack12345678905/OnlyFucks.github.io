@@ -47,7 +47,7 @@ const words = {
   DUCE:        { row: 8, col: 6, len: 4, dx: -1, dy: 1 }, // corretto
   FANTA:       { row: 6, col: 9, len: 5, dx: -1, dy: 0 } // corretto
 };
-
+let completed = false;
 // 4️⃣ SALVO LE CELLE PER OGNI PAROLA
 Object.keys(words).forEach(word => {
   const data = words[word];
@@ -88,6 +88,15 @@ document.querySelectorAll("#word-list li").forEach(li => {
       } else {
         cell.classList.remove("highlight");
       }
+      // controllo completamento
+      if (
+        !completed &&
+        Object.values(words).every(w => w.active)
+      ) {
+        completed = true;
+        alert("🎉 Complimenti! Hai completato il crucipuzzle 🎓");
+      }
+
     });
   });
 });
