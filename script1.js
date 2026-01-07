@@ -37,7 +37,7 @@ const words = {
   TRANS:       { row: 6, col: 6, len: 5, dx: -1, dy: 1 },// corretto
   TAZZINA:     { row: 6, col: 6, len: 7, dx: -1, dy: 0 },// corretto
   PROCESSO:    { row: 10, col: 7, len: 8, dx: -1, dy: 0 },// corretto
-  PAPABOYS:    { row: 11, col: 8, len: 8, dx: 0, dy: -1 },// corretto
+  PAPABOYS:    { row: 8, col: 11, len: 8, dx: 0, dy: -1 },// corretto
   GENITORI:    { row: 5, col: 7, len: 8, dx: -1, dy: 0 },// corretto
   EBREI:       { row: 7, col: 9, len: 5, dx: 0, dy: 1 },// corretto
   DINKLEBERG:  { row: 11, col: 10, len: 10, dx: -1, dy: 0 },// corretto
