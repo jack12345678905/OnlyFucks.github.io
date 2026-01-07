@@ -11,8 +11,11 @@ font-weight: 600;
 }
 
 .logo-icon {
-  max-width: 50% :
-  height: auto
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-image: url('LogoOFT.jpg');
+  background-size: cover;
 }
 
 .nav a {
