@@ -49,6 +49,9 @@ body {
 .hidden {
   display: none;
 }
+.question {
+  text-align: left
+}
 
 .answer {
   cursor: pointer;
