@@ -1,17 +1,4 @@
-
-const grid = document.getElementById("grid");
-
-gridLetters.forEach((rowStr, r) => {
-  rowStr.split("").forEach((letter, c) => {
-    const cell = document.createElement("div");
-    cell.className = "cell";
-    cell.textContent = letter;
-    cell.dataset.row = r;
-    cell.dataset.col = c;
-    grid.appendChild(cell);
-  });
-});
-
+// 1️⃣ DEFINIZIONE DELLA GRIGLIA
 const gridLetters = [
   "SENIMOWNDOESO",
   "ISTESSOEUNPSS",
@@ -25,24 +12,30 @@ const gridLetters = [
   "SSENSUUOFRRA",
   "OSSECORPTEEL",
   "LGREBELKNIDO"
-];;
+];
 
-{
-  row: 3,
-  col: 2,
-  len: 7,
-  dx: 1,
-  dy: 0
-}
+// 2️⃣ CREAZIONE HTML DELLA GRIGLIA
+const grid = document.getElementById("grid");
 
+gridLetters.forEach((rowStr, r) => {
+  rowStr.split("").forEach((letter, c) => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.textContent = letter;
+    cell.dataset.row = r;
+    cell.dataset.col = c;
+    grid.appendChild(cell);
+  });
+});
 
-
+// 3️⃣ PULIZIA EVIDENZIAZIONI
 function clearHighlight() {
   document
     .querySelectorAll(".cell.highlight")
     .forEach(c => c.classList.remove("highlight"));
 }
 
+// 4️⃣ EVIDENZIA PAROLA
 function highlightWord({ row, col, len, dx, dy }) {
   clearHighlight();
 
@@ -54,10 +47,11 @@ function highlightWord({ row, col, len, dx, dy }) {
       `.cell[data-row="${r}"][data-col="${c}"]`
     );
 
-    if (cell) cell.classList.add('highlight');
+    if (cell) cell.classList.add("highlight");
   }
 }
 
+// 5️⃣ SOLUZIONI
 const words = {
   BALTO:        { row: 4, col: 8, len: 5, dx: -1, dy: 0 }, // ←
   SUPERPOTERI: { row: 3, col: 0, len: 11, dx: 1, dy: 0 }, // →
@@ -66,13 +60,16 @@ const words = {
   FANTA:       { row: 6, col: 6, len: 5, dx: -1, dy: 1 }  // ↙
 };
 
-document.querySelectorAll('#word-list li').forEach(li => {
-  li.addEventListener('click', () => {
+// 6️⃣ CLICK SULLE PAROLE
+document.querySelectorAll("#word-list li").forEach(li => {
+  li.addEventListener("click", () => {
+    if (li.classList.contains("found")) return;
+
     const word = li.textContent;
     const data = words[word];
     if (!data) return;
 
     highlightWord(data);
-    li.classList.add('found');
+    li.classList.add("found");
   });
 });
