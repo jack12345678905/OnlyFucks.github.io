@@ -29,11 +29,19 @@ gridLetters.forEach((rowStr, r) => {
 });
 
 // 3️⃣ PULIZIA EVIDENZIAZIONI
-function clearHighlight() {
-  document
-    .querySelectorAll(".cell.highlight")
-    .forEach(c => c.classList.remove("highlight"));
+function toggleWord({ row, col, len, dx, dy }) {
+  for (let i = 0; i < len; i++) {
+    const r = row + i * dy;
+    const c = col + i * dx;
+
+    const cell = document.querySelector(
+      `.cell[data-row="${r}"][data-col="${c}"]`
+    );
+
+    if (cell) cell.classList.toggle("highlight");
+  }
 }
+
 
 // 4️⃣ EVIDENZIA PAROLA
 function highlightWord({ row, col, len, dx, dy }) {
@@ -63,13 +71,11 @@ const words = {
 // 6️⃣ CLICK SULLE PAROLE
 document.querySelectorAll("#word-list li").forEach(li => {
   li.addEventListener("click", () => {
-    if (li.classList.contains("found")) return;
-
     const word = li.textContent;
     const data = words[word];
     if (!data) return;
 
-    highlightWord(data);
-    li.classList.add("found");
+    toggleWord(data);
+    li.classList.toggle("found");
   });
 });
