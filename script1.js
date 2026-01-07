@@ -1,3 +1,17 @@
+
+const grid = document.getElementById("grid");
+
+gridLetters.forEach((rowStr, r) => {
+  rowStr.split("").forEach((letter, c) => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.textContent = letter;
+    cell.dataset.row = r;
+    cell.dataset.col = c;
+    grid.appendChild(cell);
+  });
+});
+
 const gridLetters = [
   "SENIMOWNDOESO",
   "ISTESSOEUNPSS",
@@ -21,18 +35,6 @@ const gridLetters = [
   dy: 0
 }
 
-const grid = document.getElementById("gridLetters");
-
-gridLetters.forEach((rowStr, r) => {
-  rowStr.split("").forEach((letter, c) => {
-    const cell = document.createElement("div");
-    cell.className = "cell";
-    cell.textContent = letter;
-    cell.dataset.row = r;
-    cell.dataset.col = c;
-    grid.appendChild(cell);
-  });
-});
 
 
 function clearHighlight() {
