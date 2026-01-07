@@ -70,14 +70,15 @@ Object.keys(words).forEach(word => {
 
 // ===============================
 // 5️⃣ CLICK SULLE DOMANDE
-// → mostra/nasconde la risposta
+// → mostra/nasconde TUTTE le risposte
 // ===============================
 document.querySelectorAll(".question").forEach(q => {
   q.addEventListener("click", () => {
-    const answer = q.nextElementSibling;
-    answer.classList.toggle("hidden");
+    const answers = q.parentElement.querySelectorAll(".answer");
+    answers.forEach(a => a.classList.toggle("hidden"));
   });
 });
+
 
 // ===============================
 // 6️⃣ CLICK SULLE RISPOSTE
@@ -97,28 +98,22 @@ document.querySelectorAll(".answer").forEach(ans => {
     data.cells.forEach(cell => {
       let count = parseInt(cell.dataset.count);
 
-      if (data.active) {
-        count++;
-      } else {
-        count--;
-      }
+      if (data.active) count++;
+      else count--;
 
       cell.dataset.count = count;
 
-      if (count > 0) {
-        cell.classList.add("highlight");
-      } else {
-        cell.classList.remove("highlight");
-      }
-      // controllo completamento
-      if (
-        !completed &&
-        Object.values(words).every(w => w.active)
-      ) {
-        completed = true;
-        alert("🎉 Complimenti! Hai completato il crucipuzzle ora leggi le lettere non evidenziate e vediamo cosa esce... 🎓");
-      }
-
+      if (count > 0) cell.classList.add("highlight");
+      else cell.classList.remove("highlight");
     });
+
+    // controllo completamento (UNA VOLTA)
+    if (
+      !completed &&
+      Object.values(words).every(w => w.active)
+    ) {
+      completed = true;
+      alert("🎉 Complimenti! Hai completato il crucipuzzle 🎓\nOra leggi le lettere non evidenziate…");
+    }
   });
 });
