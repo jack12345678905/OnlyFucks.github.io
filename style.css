@@ -10,6 +10,9 @@ font-size: 18px;
 font-weight: 600;
 }
 
+.logo-icon {
+  font-size: 10px
+}
 
 .nav a {
 margin-left: 16px;
