@@ -47,11 +47,11 @@ body {
 }
 
 .hidden {
-  display: none;
-  text-align: left
+  display: none !importan;
+  text-align: left;
 }
 .question {
-  text-align: left
+  text-align: left;
 }
 
 .answer {
