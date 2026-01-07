@@ -30,6 +30,7 @@ body {
 #word-list {
   list-style: none;
   padding: 0;
+  display: None
 }
 
 #word-list li {
