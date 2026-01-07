@@ -20,6 +20,27 @@ const gridLetters = [
   dx: 1,
   dy: 0
 }
+
+const grid = document.getElementById("grid");
+
+gridLetters.forEach((rowStr, r) => {
+  rowStr.split("").forEach((letter, c) => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.textContent = letter;
+    cell.dataset.row = r;
+    cell.dataset.col = c;
+    grid.appendChild(cell);
+  });
+});
+
+
+function clearHighlight() {
+  document
+    .querySelectorAll(".cell.highlight")
+    .forEach(c => c.classList.remove("highlight"));
+}
+
 function highlightWord({ row, col, len, dx, dy }) {
   clearHighlight();
 
