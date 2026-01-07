@@ -71,8 +71,11 @@ gap: 12px;
 width: 48px;
 height: 48px;
 border-radius: 50%;
-background: #ccc;
+background-image: url("TommyAvatar.jpg");
+background-size: cover;
+background-position: center;
 }
+
 
 
 .card-content h3 {
