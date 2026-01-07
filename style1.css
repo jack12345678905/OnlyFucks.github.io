@@ -47,7 +47,7 @@ body {
 }
 
 .hidden {
-  display: none !importan;
+  display: none !important;
   text-align: left;
 }
 .question {
