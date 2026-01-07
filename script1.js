@@ -21,7 +21,7 @@ const gridLetters = [
   dy: 0
 }
 
-const grid = document.getElementById("grid");
+const grid = document.getElementById("gridLetters");
 
 gridLetters.forEach((rowStr, r) => {
   rowStr.split("").forEach((letter, c) => {
