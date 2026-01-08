@@ -67,12 +67,12 @@ color: var(--dark);
 
 .hidden {
   display: none !important;
-  text-align: left;
+  text-align: left !important;
 }
 .question {
   text-align: left;
-  font-size: 30px
-  margin-bottom: 20px;
+  font-size: 50px
+  margin-bottom: 30px;
 }
 
 .answer {
