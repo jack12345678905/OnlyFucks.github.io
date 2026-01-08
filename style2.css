@@ -48,16 +48,6 @@ gap: 12px;
   overflow: hidden;
 }
 
-.of-header {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-}
-
-.of-caption {
-  padding: 12px;
-  font-size: 0.95rem;
-}
 
 
 .card-content h3 {
