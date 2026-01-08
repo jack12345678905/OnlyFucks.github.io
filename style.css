@@ -134,22 +134,4 @@ font-size: 14px;
 color: var(--gray);
 }
 
-.of-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
-}
-
-.of-carousel::-webkit-scrollbar {
-  display: none; /* Chrome */
-}
-
-.of-carousel .of-media {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-}
 
