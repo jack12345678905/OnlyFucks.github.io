@@ -57,14 +57,6 @@ color: var(--gray);
 margin-bottom: 20px;
 }
 
-
-.feed {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-gap: 20px;
-}
-
-
 .card {
 background: white;
 border-radius: 12px;
@@ -86,7 +78,11 @@ background-position: center;
 .feed {
   max-width: 600px;
   margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
+
 
 .of-card {
   background: #fff;
