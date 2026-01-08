@@ -52,6 +52,8 @@ body {
 }
 .question {
   text-align: left;
+  font-size: 20px
+  margin-bottom: 20px;
 }
 
 .answer {
