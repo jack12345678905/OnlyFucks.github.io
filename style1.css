@@ -48,11 +48,10 @@ body {
 
 .hidden {
   display: none !important;
-  text-align: left;
 }
 .question {
   text-align: left;
-  font-size: 20px
+  font-size: 30px
   margin-bottom: 20px;
 }
 
@@ -63,6 +62,7 @@ body {
   margin: 4px 0;
   border-radius: 6px;
   background: #f0f0f0;
+  text-align: left;
 }
 
 .answer.found {
