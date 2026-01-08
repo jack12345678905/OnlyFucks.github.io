@@ -33,6 +33,12 @@ body {
   display: None
 }
 
+.nav a {
+margin-left: 16px;
+text-decoration: none;
+color: var(--dark);
+}
+
 #word-list li {
   cursor: pointer;
   display: inline-block;
