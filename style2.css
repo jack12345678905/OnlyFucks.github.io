@@ -3,7 +3,11 @@ align-items: center;
 justify-content: center;
 border-radius: 8px;
 }
-
+.nav a {
+margin-left: 16px;
+text-decoration: none;
+color: var(--dark);
+}
 
 .logo-text {
 font-size: 18px;
