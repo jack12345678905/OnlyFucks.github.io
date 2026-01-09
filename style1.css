@@ -50,7 +50,20 @@ display: grid;
  margin-left: 16px;
  text-decoration: none;
  color: var(--dark);
+ display: flex;
  }
+
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* tutto a sinistra */
+  gap: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: left; /* 👈 annulla il center del body */
+}
+
 
  #word-list li {
  cursor: pointer;
