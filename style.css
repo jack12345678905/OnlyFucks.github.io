@@ -96,8 +96,9 @@ margin-bottom: 20px;
 }
 
 .of-header {
-  display: flex;
-  align-items: center;
+  display: flex;          /* Flex orizzontale */
+  align-items: center;    /* Centra verticalmente avatar e testo */
+  gap: 12px;              /* Spazio tra avatar e nome */
   padding: 12px;
 }
 
