@@ -1,8 +1,19 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* ====================== BASE ====================== */
+:root {
+  --primary: #00aff0;
+  --dark: #333;
+  --gray: #666;
+  border-radius: 8px;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center; /* tutto il contenuto principale centrato */
+}
+
+/* ====================== GRID CRUCIPUZZLE ====================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 40px);
@@ -27,15 +38,23 @@ body {
   color: white;
 }
 
-#word-list {
-  list-style: none;
-  padding: 0;
-  display: none;
+/* ====================== TOPBAR ====================== */
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* tutto a sinistra */
+  gap: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-sizing: border-box;
 }
 
-.logo-text {
-font-size: 18px;
-font-weight: 600;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo-icon {
@@ -44,29 +63,35 @@ font-weight: 600;
   border-radius: 50%;
   background-image: url('LogoOFT.jpg');
   background-size: cover;
+  background-position: center;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
 }
 
 .nav a {
-margin-left: 16px;
-text-decoration: none;
-color: var(--dark);
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
 }
 
-#word-list li {
-  cursor: pointer;
-  display: inline-block;
-  margin: 6px 10px;
-  padding: 4px 8px;
-  border-radius: 6px;
+/* ====================== TITOLI ====================== */
+h1, h2 {
+  margin: 20px 0;
 }
 
-#word-list li.found {
-  text-decoration: line-through;
-  color: gray;
+/* ====================== DOMANDE/QUIZ ====================== */
+#quiz {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* centrato */
 }
 
-.hidden {
-  display: none !important;
+#question-list li {
+  list-style: none;
+  margin-bottom: 40px;
 }
 
 .question {
@@ -75,8 +100,8 @@ color: var(--dark);
 }
 
 .answer {
-  display: inline-block;   /* 👈 permette centratura */
-  margin: 6px auto;        /* 👈 centro orizzontale */
+  display: inline-block;   /* permette centratura */
+  margin: 6px auto;        /* centro orizzontale */
   cursor: pointer;
   padding: 6px 14px;
   border-radius: 6px;
@@ -90,6 +115,7 @@ color: var(--dark);
   text-align: center;
 }
 
+/* ====================== IMMAGINI DOMANDE ====================== */
 .of-media {
   width: 20%;
   display: inline-block;
@@ -97,15 +123,3 @@ color: var(--dark);
   object-fit: cover;
   border-radius: 12px;
 }
-
-#quiz {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center; /* 👈 forza allineamento */
-}
-
-#question-list li {
-  list-style: none;
-  margin-bottom: 40px;
-}
-
