@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
 }
 
 .cell.highlight {
@@ -30,7 +30,7 @@ body {
 #word-list {
   list-style: none;
   padding: 0;
-  display: None
+  display: none;
 }
 
 .logo-text {
@@ -67,11 +67,10 @@ color: var(--dark);
 
 .hidden {
   display: none !important;
-  text-align: left !important;
 }
 .question {
   text-align: left;
-  font-size: 50px
+  font-size: 50px;
   margin-bottom: 30px;
 }
 
@@ -93,7 +92,6 @@ color: var(--dark);
 
 .of-media {
   width: 20%;
-  max-height: auto;
   object-fit: cover;
   border-radius: 12px;
   margin-left: 10px;
