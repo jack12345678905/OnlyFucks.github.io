@@ -58,11 +58,13 @@ margin-bottom: 20px;
 }
 
 .card {
-background: white;
-border-radius: 12px;
-padding: 16px;
-display: flex;
-gap: 12px;
+  max-width: 500px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 
 
