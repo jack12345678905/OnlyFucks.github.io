@@ -67,12 +67,13 @@ gap: 12px;
 
 
 .avatar {
-width: 50px;
-height: 50px;
-border-radius: 50%;
-background-image: url("TommyAvatar.jpg");
-background-size: cover;
-background-position: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* 👈 IMPEDISCE IL RIDIMENSIONAMENTO */
+  border-radius: 50%;
+  background-image: url("TommyAvatar.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .feed {
@@ -126,6 +127,7 @@ background-position: center;
 
 .card-content h3 {
 font-size: 16px;
+flex:1;
 }
 
 
