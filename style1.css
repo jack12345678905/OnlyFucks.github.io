@@ -105,8 +105,8 @@ cursor: pointer;
 ù
 
 .of-media {
- width: 25%;
- max-width: 100px;
+ width: 20%;
+ max-width: 50px;
   margin: 10px auto;
   display: inline-block;
   object-fit: cover;
