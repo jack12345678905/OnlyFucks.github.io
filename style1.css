@@ -75,11 +75,10 @@ color: var(--dark);
 }
 
 .answer {
-  display: block;        /* 👈 va a capo */
-  margin-left: 20px;     /* 👈 indentazione sotto la domanda */
-  margin-top: 6px;
+  display: inline-block;   /* 👈 permette centratura */
+  margin: 6px auto;        /* 👈 centro orizzontale */
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 6px 14px;
   border-radius: 6px;
   background: #f0f0f0;
   font-size: 20px;
@@ -88,20 +87,21 @@ color: var(--dark);
 .answer.found {
   text-decoration: underline;
   background: #d0f0ff;
-  text-align: left;
+  text-align: center;
 }
 
 .of-media {
   width: 20%;
+  display: inline-block;
+  margin: 10px auto;
   object-fit: cover;
   border-radius: 12px;
-  margin-left: 10px;
 }
 
 #quiz {
   max-width: 800px;
   margin: 0 auto;
-  text-align: left; /* 👈 forza allineamento */
+  text-align: center; /* 👈 forza allineamento */
 }
 
 #question-list li {
