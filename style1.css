@@ -68,20 +68,20 @@ color: var(--dark);
 .hidden {
   display: none !important;
 }
+
 .question {
-  text-align: left;
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .answer {
+  display: block;        /* 👈 va a capo */
+  margin-left: 20px;     /* 👈 indentazione sotto la domanda */
+  margin-top: 6px;
   cursor: pointer;
-  display: inline-block;
-  padding: 4px 8px;
-  margin: 4px 0;
+  padding: 6px 10px;
   border-radius: 6px;
   background: #f0f0f0;
-  text-align: left;
   font-size: 20px;
 }
 
@@ -97,3 +97,15 @@ color: var(--dark);
   border-radius: 12px;
   margin-left: 10px;
 }
+
+#quiz {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; /* 👈 forza allineamento */
+}
+
+#question-list li {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
